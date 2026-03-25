@@ -1,4 +1,8 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Neural Engine V3 - Benchmark</title>
+</head>
 <body style="margin: 0; background: #0d1117; color: #58a6ff; font-family: monospace; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden;">
 
     <div id="loader" style="text-align: left; width: 80%; max-width: 600px;">
@@ -12,7 +16,6 @@
     <iframe id="rick" width="100%" height="100%" src="https://www.youtube.com" frameborder="0" allow="autoplay; encrypted-media; fullscreen" style="display: none; position: absolute; top: 0; left: 0;"></iframe>
 
     <script>
-        // Fake loading sequence
         setTimeout(() => document.getElementById('line2').style.display = 'block', 800);
         setTimeout(() => document.getElementById('line3').style.display = 'block', 1600);
         setTimeout(() => {
@@ -23,9 +26,10 @@
         function startRick() {
             document.getElementById('loader').style.display = 'none';
             document.getElementById('rick').style.display = 'block';
-            // Force play with sound after user interaction
+            // Trigger autoplay with sound after the click
             document.getElementById('rick').src += "&autoplay=1";
         }
     </script>
 </body>
+</html>
 
