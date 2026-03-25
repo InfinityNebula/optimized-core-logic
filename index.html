@@ -3,45 +3,33 @@
 <head>
     <title>Neural Engine V3 - Benchmark</title>
 </head>
-<body style="margin: 0; background: #0d1117; color: #58a6ff; font-family: monospace; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden;">
-
-    <div id="loader" style="text-align: left; width: 80%; max-width: 600px;">
+<body style="margin:0; background:#0d1117; color:#58a6ff; font-family:monospace; display:flex; align-items:center; justify-content:center; height:100vh; overflow:hidden;">
+    
+    <div id="loader" style="text-align:left; width:80%; max-width:600px;">
         <p>>>> Initializing Neural_Engine_V3...</p>
         <p id="line2" style="display:none">>>> Loading Tensor Weights [7b_optimized]...</p>
         <p id="line3" style="display:none">>>> Compiling C++ Inference Kernels...</p>
         <p id="line4" style="display:none">>>> Success. Click to verify performance metrics.</p>
-        <button onclick="startRick()" id="startBtn" style="display:none; background: #238636; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 6px; margin-top: 10px;">
+        <button id="startBtn" style="display:none; background:#238636; color:white; border:none; padding:10px 20px; cursor:pointer; border-radius:6px; margin-top:10px;">
             Run Benchmark.sh
         </button>
     </div>
 
-    <iframe id="rick"
-        width="100%" height="100%"
-        src=""
-        frameborder="0"
-        allow="autoplay; encrypted-media; fullscreen"
-        allowfullscreen
-        style="display: none; position: absolute; top: 0; left: 0;">
-    </iframe>
-
     <script>
-        setTimeout(() => document.getElementById('line2').style.display = 'block', 800);
-        setTimeout(() => document.getElementById('line3').style.display = 'block', 1600);
-        setTimeout(() => {
-            document.getElementById('line4').style.display = 'block';
-            document.getElementById('startBtn').style.display = 'block';
+        // Show fake loading steps
+        setTimeout(()=>document.getElementById('line2').style.display='block', 800);
+        setTimeout(()=>document.getElementById('line3').style.display='block', 1600);
+        setTimeout(()=>{
+            document.getElementById('line4').style.display='block';
+            const btn=document.getElementById('startBtn');
+            btn.style.display='block';
+
+            // Redirect on click
+            btn.onclick = () => {
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            };
         }, 2400);
-
-        function startRick() {
-            document.getElementById('loader').style.display = 'none';
-
-            const iframe = document.getElementById('rick');
-            iframe.style.display = 'block';
-
-            // ✅ ACTUAL FIX
-            iframe.src = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
-        }
     </script>
+
 </body>
 </html>
-
