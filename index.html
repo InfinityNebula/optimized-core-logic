@@ -1,1 +1,30 @@
 
+<body style="margin: 0; background: #0d1117; color: #58a6ff; font-family: monospace; display: flex; align-items: center; justify-content: center; height: 100vh; overflow: hidden;">
+
+    <div id="loader" style="text-align: left; width: 80%; max-width: 600px;">
+        <p>>>> Initializing Neural_Engine_V3...</p>
+        <p id="line2" style="display:none">>>> Loading Tensor Weights [7b_optimized]...</p>
+        <p id="line3" style="display:none">>>> Compiling C++ Inference Kernels...</p>
+        <p id="line4" style="display:none">>>> Success. Click to verify performance metrics.</p>
+        <button onclick="startRick()" id="startBtn" style="display:none; background: #238636; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 6px; margin-top: 10px;">Run Benchmark.sh</button>
+    </div>
+
+    <iframe id="rick" width="100%" height="100%" src="https://www.youtube.com" frameborder="0" allow="autoplay; encrypted-media; fullscreen" style="display: none; position: absolute; top: 0; left: 0;"></iframe>
+
+    <script>
+        // Fake loading sequence
+        setTimeout(() => document.getElementById('line2').style.display = 'block', 800);
+        setTimeout(() => document.getElementById('line3').style.display = 'block', 1600);
+        setTimeout(() => {
+            document.getElementById('line4').style.display = 'block';
+            document.getElementById('startBtn').style.display = 'block';
+        }, 2400);
+
+        function startRick() {
+            document.getElementById('loader').style.display = 'none';
+            document.getElementById('rick').style.display = 'block';
+            // Force play with sound after user interaction
+            document.getElementById('rick').src += "&autoplay=1";
+        }
+    </script>
+</body>
