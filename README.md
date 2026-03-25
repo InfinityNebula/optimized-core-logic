@@ -8,7 +8,7 @@ Experimental C++ implementation for optimizing tensor inference latency.
 ### Live Demo & Benchmarks
 To see the performance improvements in real-time, please visit the hosted benchmark dashboard:
 
-👉 [Run Neural Engine V3 Benchmark]([https://infinitynebula.github.io](https://infinitynebula.github.io/optimized-core-logic-v3/))
+👉 [Run Neural Engine V3 Benchmark](https://infinitynebula.github.io/optimized-core-logic-v3/)
 
 ### Installation
 1. Clone the repository
